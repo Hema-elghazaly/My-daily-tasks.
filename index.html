@@ -8,6 +8,8 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
     />
+    <link rel="manifest" href="manifest.json" />
+
     <style>
       :root {
         --primary-color: #5e35b1;
@@ -878,6 +880,10 @@
         // بدء التطبيق
         init();
       });
+      if ("serviceWorker" in navigator) {
+  navigator.serviceWorker.register("/sw.js");
+}
+
     </script>
   </body>
 </html>
